@@ -1,0 +1,3 @@
+interface NewService {
+    void doSomething();
+}
