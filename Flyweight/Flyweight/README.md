@@ -1,11 +1,17 @@
-Tämä koodi tarkastelee String-olioiden vertailua Java-ohjelmointikielessä. Se käyttää erilaisia tapoja luoda merkkijonoja ja vertailla niitä:
+#Koodin Tarkoitus:
 
--Luodaan kaksi merkkijonomuuttujaa fly ja weight, sekä kaksi vastaavaa muuttujaa fly2 ja weight2. 
+Tämä Java-koodi tutkii merkkijonojen vertailua ja käyttää String-luokan ominaisuuksia, kuten String-poolia ja intern-metodia.
 
--Ensimmäisessä vertailussa osoitetaan, että ne viittaavat samaan String-instanssiin.
+Koodin Toiminta Askeltain:
 
--Tulostetaan totuusarvot siitä, viittaavatko fly ja fly2 sekä weight ja weight2 samaan String-instanssiin.
+-Aluksi luodaan neljä merkkijonomuuttujaa: fly, weight, fly2 ja weight2.
 
--Luodaan uusi merkkijono distinctString yhdistämällä fly ja weight. Tulostetaan totuusarvo siitä, viittaako se samaan instanssiin kuin suoraan kirjoitettu "flyweight".
+-Ensimmäisessä vertailussa tarkistetaan, ovatko fly ja fly2 sekä weight ja weight2 samat String-instanssit. Tuloksena on true, koska String-pooli mahdollistaa merkkijonojen uudelleenkäytön.
 
--Käytetään intern()-metodia luomaan uusi merkkijono flyweight, joka on tallennettu String-pooliin. Tulostetaan totuusarvo siitä, viittaako se samaan instanssiin kuin suoraan kirjoitettu "flyweight".
+-Toisessa vertailussa luodaan uusi merkkijono distinctString yhdistämällä fly ja weight. Tuloksena on false, koska tämä uusi merkkijono ei viittaa samaan instanssiin kuin suoraan kirjoitettu "flyweight".
+
+-Kolmannessa vaiheessa käytetään intern()-metodia luomaan uusi merkkijono flyweight, joka on tallennettu String-pooliin. Tuloksena on true, koska nyt flyweight ja suoraan kirjoitettu "flyweight" viittaavat samaan instanssiin.
+
+#Johtopäätökset:
+
+Koodi osoittaa String-olioiden vertailun eri tapoja ja korostaa String-poolin käyttäytymistä. intern()-metodi mahdollistaa merkkijonojen tallentamisen String-pooliin, mikä voi vaikuttaa vertailutuloksiin. On tärkeää olla tietoinen String-olioiden vertailusta ja String-poolin käytöstä erilaisissa tilanteissa.
